@@ -1,4 +1,7 @@
 # Mitigating Reward Over-optimization in Direct Alignment Algorithms with Importance Sampling
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Paper](https://img.shields.io/badge/arXiv-Paper-red)](https://arxiv.org/abs/2502.03029)
+[![Code](https://img.shields.io/badge/Code-PyTorch-green)](#)
 
 ## Abstract
 
@@ -44,19 +47,19 @@ pip install -r requirements.txt
 
 In this section, we empirically evaluate IS-DAAs' ability to align language models with human preferences and mitigate the reward over-optimization problem.
 
-### TL;DR Summarization
+### 1. TL;DR Summarization
 
 We systematically study the trade-off between the policy performance and KL regularization achieved by different alignment methods in a controlled environment where we assume to have access to a golden reward model as the ground-truth preferences.
 
-### Instruction Following
+### 2. Instruction Following
 
 We evaluate IS-DAAs on three standard open-ended instruction following benchmarks. Under both settings, IS-DAAs outperform existing alignment approaches and better mitigate the over-optimization problem compared to existing approaches designed for this purpose.
 
-### Models
-
+### 3. Models
+  
 Throughout our experiments, we use Llama-3.2-3B as the pre-trained base model. For both summarization and instruction following, we first supervised fine-tuning Llama-3.2-3B to serve as the initialization for subsequent preference training.
 
-### Baselines
+### 4. Baselines
 
 In addition to IS-DAAs, we evaluate several existing baselines that address the over-optimization problem in DAAs, including:
 
